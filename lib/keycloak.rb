@@ -309,7 +309,8 @@ module Keycloak
       if !Keycloak.proc_cookie_token.nil?
         JSON Keycloak.proc_cookie_token.call
       else
-        raise Keycloak::ProcCookieTokenNotDefined
+        #raise Keycloak::ProcCookieTokenNotDefined
+        return nil
       end
     end
 
